@@ -1,5 +1,7 @@
 export async function getStaticProps() {
-  const books = await fetch('http://localhost:3001').then((res) => res.json());
+  const books = await fetch('http://124c62971ebc.ngrok.io').then((res) =>
+    res.json()
+  );
 
   // console.log(books);
   return {
