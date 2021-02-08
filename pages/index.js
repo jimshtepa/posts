@@ -1,5 +1,5 @@
 export async function getStaticProps() {
-  const books = await fetch('http://124c62971ebc.ngrok.io').then((res) =>
+  const books = await fetch('http://085ae36def56.ngrok.io').then((res) =>
     res.json()
   );
 
@@ -8,6 +8,7 @@ export async function getStaticProps() {
     props: {
       books,
     },
+    revalidate: 1,
   };
 }
 
