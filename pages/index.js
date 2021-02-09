@@ -15,5 +15,9 @@ export async function getStaticProps() {
 export default function Home({ books }) {
   // console.log(books);
   // return <p>hello</p>;
-  return books.map((b) => <li key={b.id}>{b.title}</li>);
+  return books.map((b) => (
+    <li key={b.id}>
+      {b.title} <p>{b.content}</p>
+    </li>
+  ));
 }
