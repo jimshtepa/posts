@@ -1,3 +1,9 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 html,
 body {
   padding: 0;
@@ -6,11 +12,61 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: 200;
+  font-size: medium;
+}
+
+p {
+  font-weight: 100;
+  font-size: small;
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+.container {
+  width: 900px;
+  margin: 2rem auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  background-image: linear-gradient(to right bottom, #e66465, #9198e5);
+  height: 50vh;
+  margin-bottom: 3rem;
+}
+
+.hero {
+  /* outline: 1px solid white; */
+  width: 800px;
+  margin: 0 auto;
+}
+
+.hero-image {
+  /* flex-grow: 1; */
+}
+
+.news-section {
+  width: 800px;
+  margin: 2rem auto 2rem;
+  padding: 1rem 2rem;
+}
+
+.news-item {
+  position: relative;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  border: 1px solid steelblue;
+  align-self: stretch;
+  /* transform: skew(25deg); */
 }
