@@ -1,72 +1,69 @@
 *,
 *::after,
 *::before {
+  margin: 0;
   box-sizing: border-box;
 }
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+h1 {
+  text-align: center;
+  margin: 2rem 0;
 }
 
 h2 {
-  margin: 0;
-  padding: 0;
-  font-weight: 200;
-  font-size: medium;
-}
-
-p {
-  font-weight: 100;
-  font-size: small;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+  margin: 1rem 0 1rem 0;
+  text-align: center;
 }
 
 .container {
   width: 900px;
-  margin: 2rem auto;
-}
-
-.flex {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.header {
-  background-image: linear-gradient(to right bottom, #e66465, #9198e5);
-  height: 50vh;
-  margin-bottom: 3rem;
-}
-
-.hero {
-  /* outline: 1px solid white; */
-  width: 800px;
   margin: 0 auto;
 }
 
-.hero-image {
-  /* flex-grow: 1; */
+.posts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.news-section {
-  width: 800px;
-  margin: 2rem auto 2rem;
-  padding: 1rem 2rem;
-}
-
-.news-item {
-  position: relative;
+.post {
+  flex: 1;
   margin: 1rem;
   padding: 1rem 2rem;
-  border: 1px solid steelblue;
   align-self: stretch;
-  /* transform: skew(25deg); */
+  border-radius: 5px;
+  box-shadow: 1px 3px 5px 1px rgba(0, 0, 0, 0.8);
+  position: relative;
+}
+
+.btn {
+  position: absolute;
+  top: 0;
+  background: lightgray;
+  color: darkslateblue;
+  border: none;
+  border-radius: 5px;
+  font-size: medium;
+  box-shadow: 1px 3px 5px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 0.1s linear;
+  margin: 0.5rem;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:focus {
+  outline: none;
+}
+.btn:active {
+  outline: 2px solid black;
+}
+
+.edit {
+  right: 2rem;
+}
+
+.delete {
+  right: 0;
 }

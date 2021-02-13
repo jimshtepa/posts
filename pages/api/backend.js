@@ -9,11 +9,15 @@ export async function postMessage(msg) {
     .insert([{ title: msg }]);
 }
 
-export async function fetchMessages() {
-  let { data: messages, error } = await supabase.from('messages').select('*');
+export async function getMessages() {
+  let { data: messages, error } = await supabase.from('posts').select('*');
   return messages;
 }
 
 export async function deleteMessage(id) {
-  const { data, error } = await supabase.from('messages').delete().eq('id', id);
+  const { data, error } = await supabase.from('posts').delete().eq('id', id);
+}
+
+export async function logSomething() {
+  console.log('hello');
 }
