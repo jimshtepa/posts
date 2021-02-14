@@ -28,11 +28,12 @@ export default function Home({ posts }) {
   return (
     <div className="container">
       <h1>Great posts</h1>
-      <div className="posts container">
+      <div className="posts">
         {posts.map((p) => (
           <Post key={p.id} post={p} />
         ))}
       </div>
+      <button className="btn create">&#43; </button>
     </div>
   );
 }
