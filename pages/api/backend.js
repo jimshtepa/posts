@@ -3,10 +3,10 @@ const supabaseUrl = 'https://ipemfodnpbfkhhldtmtl.supabase.co';
 const supabaseKey = process.env.SUPABASE_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
-export async function postMessage(msg) {
+export async function postMessage(title, body) {
   const { data, error } = await supabase
-    .from('messages')
-    .insert([{ title: msg }]);
+    .from('posts')
+    .insert([{ title, body }]);
 }
 
 export async function getMessages() {

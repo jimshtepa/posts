@@ -16,18 +16,23 @@ h2 {
   text-align: center;
 }
 
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* outline: 1px solid red; */
+}
+
 .container {
   width: 900px;
   height: 100vh;
   margin: 0 auto;
   position: relative;
-  outline: 1px solid steelblue;
+  /* outline: 1px solid steelblue; */
 }
 
 .posts {
-  display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .post {
@@ -41,8 +46,6 @@ h2 {
 }
 
 .btn {
-  position: absolute;
-
   background: lightgray;
   color: darkslateblue;
   border: none;
@@ -61,20 +64,23 @@ h2 {
   outline: none;
 }
 .btn:active {
-  outline: 2px solid black;
+  /* outline: 2px solid black; */
 }
 
 .edit {
+  position: absolute;
   top: 0;
   right: 2rem;
 }
 
 .delete {
+  position: absolute;
   top: 0;
   right: 0;
 }
 
 .create {
+  position: absolute;
   top: 80vh;
   right: 1rem;
   width: 10px;
@@ -85,4 +91,26 @@ h2 {
   align-items: center;
   justify-content: center;
   font-size: x-large;
+}
+
+.form {
+  height: 400px;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.modal {
+  /* background-color: red; */
+  background-color: white;
+  box-shadow: 1px 1px 14px 1px rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  position: fixed;
+  inset: 100px;
+  /* top: 100px;
+  left: 100px;
+  right: 100px;
+  bottom: 100px; */
 }
