@@ -20,6 +20,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   /* outline: 1px solid red; */
 }
 
@@ -64,7 +65,7 @@ h2 {
   outline: none;
 }
 .btn:active {
-  /* outline: 2px solid black; */
+  outline: 2px solid black;
 }
 
 .edit {

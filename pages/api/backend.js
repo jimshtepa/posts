@@ -3,21 +3,26 @@ const supabaseUrl = 'https://ipemfodnpbfkhhldtmtl.supabase.co';
 const supabaseKey = process.env.SUPABASE_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
-export async function postMessage(title, body) {
+export async function postPost(title, body) {
   const { data, error } = await supabase
     .from('posts')
     .insert([{ title, body }]);
+  return data;
 }
 
-export async function getMessages() {
+export async function getPosts() {
   let { data: messages, error } = await supabase.from('posts').select('*');
   return messages;
 }
 
-export async function deleteMessage(id) {
+export async function deletePost(id) {
   const { data, error } = await supabase.from('posts').delete().eq('id', id);
 }
 
-export async function logSomething() {
-  console.log('hello');
+export async function updatePost({ id, title, body }) {
+  const { data, error } = await supabase
+    .from('posts')
+    .update({ title, body })
+    .eq('id', id);
+  return data;
 }
